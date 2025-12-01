@@ -30,13 +30,15 @@ public class Task3 {
     }
 
 
-    public static int maxAbs(int[] arr){
-        int max = arr[0];
+    public static int maxAbs(int[] arr) {
+        int maxAbs=Math.abs(arr[0]);
         for (int i = 1; i < arr.length; i++) {
-            if (Math.abs(arr[i]) > Math.abs(max)) {
-                max = arr[i];
+            int currentAbs=Math.abs(arr[i]);
+            if (currentAbs>maxAbs){
+                maxAbs=currentAbs;
             }
         }
-        return max;
+        return maxAbs;
+
     }
 }

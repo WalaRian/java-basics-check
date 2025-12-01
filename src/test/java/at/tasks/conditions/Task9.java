@@ -48,11 +48,15 @@ public class Task9 {
         }
     }
 
-
     public static boolean magic6(int x, int y) {
-        if ((x == 6) || (y == 6) || (x + y == 6) || (Math.abs(x - y) == 6)){
+        if (x == 6 || y == 6) {
             return true;
+        } else if (x + y == 6) {
+            return true;
+        } else if (x - y == 6) {
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }

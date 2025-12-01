@@ -25,7 +25,8 @@ public class Task6 {
     }
 
 
-    public static boolean isUpperCase(char x){
+    public static boolean isUpperCase(char x) {
         return x >= 'A' && x <= 'Z';
     }
+
 }

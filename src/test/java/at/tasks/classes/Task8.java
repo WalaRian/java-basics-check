@@ -52,7 +52,11 @@ public class Task8 {
     }
 
 
-    public static boolean isDivisor (int a, int b){
-        return a % b == 0 || b % a == 0;
+//    public static boolean isDivisor (int a, int b) {
+//        return ((double) a % b) == 0 || ((double) b % a) == 0;
+//    }
+
+    public static boolean isDivisor(int a, int b) {
+        return (a != 0 && b % a == 0) || (b != 0 && a % b == 0);
     }
 }

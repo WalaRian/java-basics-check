@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class Task7 {
+public class Task6 {
     @RepeatedTest(10)
     void runTest() {
         Random random = new Random();
@@ -20,10 +20,15 @@ public class Task7 {
                 array[j] = random.nextInt(-99, 99);
             }
             List<Integer> list = new java.util.ArrayList<>(Arrays.stream(array).boxed().toList());
-            Collections.reverse(list);
 
+            Collections.reverse(list);
             int[] expectedResult = list.stream().mapToInt(value -> value).toArray();
-            int[] actualResult = reverseBack(array);
+            int[] actualResult = new int[array.length];
+            for (int j = 0; j < array.length; j++) {
+                actualResult[j] = array[j];
+            }
+
+            reverse(actualResult);
 
             System.out.println("%s -> %s".formatted(Arrays.toString(array), Arrays.toString(actualResult)));
             Assertions.assertThat(actualResult)
@@ -32,13 +37,16 @@ public class Task7 {
     }
 
 
-    public static int[] reverseBack(int[] arr) {
-        int[] arr2 = new int[arr.length];
-        int i = 0;
-        for (int j = arr.length - 1; j >= 0; j--) {
-            arr2[j] = arr[i];
-            i++;
+    public static void reverse(int[] arr) {
+        int first = 0;
+        int last = arr.length - 1;
+        while (first < last) {
+            int per = arr[first];
+            arr[first] = arr[last];
+            arr[last] = per;
+            first++;
+            last--;
         }
-        return arr2;
     }
+
 }

@@ -26,17 +26,10 @@ public class Task3 {
     }
 
     public static String chet(int x) {
-
-        String result = "0";
-
-        for (int i = 2; i <= x; i = i + 2) {
-
-            result = result + " "
-                    + i;
-
+        String res="";
+        for (int i=0; i<=x; i+=2)  {
+            res += i + " ";
         }
-
-        return result;
-
+        return res;
     }
 }

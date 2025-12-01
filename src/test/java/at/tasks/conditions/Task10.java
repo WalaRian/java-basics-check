@@ -45,27 +45,18 @@ public class Task10 {
 
     }
 
+    public static String age(int x) {
+        int lastDigit = x % 10;
+        int lastTwoDigits = x % 100;
 
-    public static String age(int x){
-
-        int m = x % 10;
-
-        int n = x % 100;
-
-        if (m == 1 && n != 11) {
-
-            return x + " год";
-
-        } else if ((m >= 2 && m <= 4) && (n < 10 || n > 20)) {
-
-            return x + " года";
-
-        } else {
-
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
             return x + " лет";
-
+        } else if (lastDigit == 1) {
+            return x + " год";
+        } else if (lastDigit >= 2 && lastDigit <= 4) {
+            return x + " года";
+        } else {
+            return x + " лет";
         }
-
     }
-
 }

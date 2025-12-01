@@ -32,9 +32,8 @@ public class Task5 {
         }
     }
 
-
-    public static boolean is2Digits(int x){
-        return x > 9 && x < 100;
+    public static boolean is2Digits(int x) {
+        return x >= 10 && x <= 99;
     }
 }
 

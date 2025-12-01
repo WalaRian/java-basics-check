@@ -32,31 +32,17 @@ public class Task11 {
     }
 
 
-    public
-    static int[] add(int[] arr, int x, int pos) {
-
-        int newArray[] = new int[ arr.length +
-                1];
-
-        for (int i = 0; i < pos; i++) {
-
-            newArray[i] = arr[i];
-
+    public static int[] add(int[] arr, int x, int pos){
+        int[]res = new int[arr.length+1];
+        for(int i =0; i<pos; i++){
+            res[i]=arr[i];
         }
-
-        newArray[pos] = x;
-
-        for (int i = pos; i < arr.length;
-             i++) {
-
-            newArray[i + 1] = arr[i];
-
+        for(int j = pos; j<arr.length+1; j++){
+            res[j]=arr[j-1];
         }
-
-        return newArray;
-
+        res[pos]=x;
+        return res;
     }
-
 //    public static int[] add(int[] arr, int x, int pos) {
 //        int[] result = new int[arr.length + 1];
 //

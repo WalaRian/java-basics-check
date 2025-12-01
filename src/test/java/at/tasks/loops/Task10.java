@@ -10,32 +10,25 @@ public class Task10 {
         guessGame();
         guessGame();
     }
-    static void guessGame() {
-
+    public static void guessGame() {
         int randomNum = 3;
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        int x =0;
+        int attempts=0;
 
-        java.util.Scanner sc = new
-                Scanner(System.in);
-
-        System.out.println("What number am I thinking (0 to 9)? :");
-
-        int x = sc.nextInt();
-
-        int retryCount = 1;
-
-        while (x != randomNum) {
-
+        do
+        {
             System.out.println("What number am I thinking (0 to 9)? :");
-
             x = sc.nextInt();
+            attempts++;
 
-            retryCount++;
+            if (x != randomNum) {
+                System.out.println("No, try again");
+            }
 
-        }
+        } while (x != randomNum);
 
-        System.out.println("Yes, it`s" + randomNum);
-
-                System.out.println("Попыток:  " + retryCount);
-
+        System.out.println("Yes, it`s " + randomNum);
+        System.out.println("Attempts: "+ attempts);
     }
 }

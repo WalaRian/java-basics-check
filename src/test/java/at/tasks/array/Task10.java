@@ -29,35 +29,25 @@ public class Task10 {
         }
     }
 
-
-    public
-    static int[] deleteNegative(int[] arr) {
+    public static int[] deleteNegative(int[] arr) {
 
         int count = 0;
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] >= 0) {
-
-                count++;
-
-            }
+            if (arr[i] >=0) count++;
 
         }
 
-        int result[] = new int[count];
+        int[] result = new int[count];
 
-        count = 0;
+        int pos = 0;
 
-        for (int i = 0; i < arr.length; i++)
-        {
+        for (int i = 0; i < arr.length; i++) {
 
             if (arr[i] >= 0) {
 
-                result[count] = arr[i];
-
-                count++;
+                result[pos++] =arr[i];
 
             }
 
@@ -67,3 +57,4 @@ public class Task10 {
 
     }
 }
+

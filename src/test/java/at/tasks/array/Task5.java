@@ -41,22 +41,16 @@ public class Task5 {
     }
 
 
-    public static boolean palindrom(int[] arr)
-    {
-
-        for (int i = 0; i <= arr.length / 2
-                - 1; i++) {
-
-            if (arr[i] != arr[arr.length - i -
-                    1]) {
-
+    public static boolean palindrom(int[] arr) {
+        int first = 0;
+        int last = arr.length - 1;
+        while (first < last) {
+            if (Math.abs(arr[first])!=Math.abs(arr[last]) ){
                 return false;
-
             }
-
+            first++;
+            last--;
         }
-
         return true;
-
     }
 }

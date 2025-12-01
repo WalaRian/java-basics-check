@@ -30,8 +30,7 @@ public class Task12 {
                 list.add(pos + j, ins[j]);
             }
             int[] expectedValue = list.stream().mapToInt(value -> value).toArray();
-            System.out.println(pos);
-            int[] actualValue = add(arr, ins, pos);
+              int[] actualValue = add(arr, ins, pos);
 
             System.out.println("\n%s\n insert %s, at pos %d\n->%s\n".formatted(Arrays.toString(arr), Arrays.toString(ins), pos, Arrays.toString(actualValue)));
             Assertions.assertThat(actualValue)
@@ -56,34 +55,21 @@ public class Task12 {
 //        return result;
 //    }
 
-    public
-    static int[] add(int[] arr, int[] ins, int pos) {
-
-        int newArray[] = new int[ arr.length +
-                ins.length];
-
+    public static int[] add(int[] arr, int[] ins, int pos) {
+        //создаём временный массив, размер - исходный массив + кол-во элементов массива ins
+        int[] arrTemp = new int[arr.length + ins.length];
+        //перебираем исходный массив до pos, добавляем элементы во временный массив
         for (int i = 0; i < pos; i++) {
-
-            newArray[i] = arr[i];
-
+            arrTemp[i] = arr[i];
         }
-
-        for (int i = pos; i < pos +
-                ins.length; i++) {
-
-            newArray[i] = ins[i - ins.length];
-
+        //перебираем массив ins, добавляем элементы во временный массив
+        for (int i = 0; i < ins.length; i++) {
+            arrTemp[i + pos] = ins[i];
         }
-
-        for (int i = pos + ins.length; i <
-                arr.length + ins.length; i++) {
-
-            newArray[i] = arr[i - pos];
-
+        //перебираем исходный массив c pos и далее, добавляем элементы во временный массив
+        for (int i = pos; i < arr.length; i++) {
+            arrTemp[i + ins.length] = arr[i];
         }
-
-        return
-                newArray;
-
+        return arrTemp;
     }
 }

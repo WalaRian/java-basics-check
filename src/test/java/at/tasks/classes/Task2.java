@@ -28,7 +28,8 @@ public class Task2 {
     }
 
     public static int sumLastNums(int x) {
-        int y = x % 10 + (x / 10) % 10;
-        return y;
+        int lastDigit = x % 10;
+        int secondLastDigit = (x / 10) % 10;
+        return lastDigit + secondLastDigit;
     }
 }

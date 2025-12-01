@@ -29,11 +29,18 @@ public class Task7 {
 
 
     //Практика Java. Условия Задание #7
-    public static int sum2(int x, int y){
-        int sum = x+y;
-        if ( sum >= 10 && sum <= 19){
+//    public static int sum2(int x, int y) {
+//        int sum = x + y;
+//        if (sum >= 10 && sum <= 19) return 20;
+//        return sum;
+//    }
+
+    public static int sum2(int x, int y) {
+        int sum = x + y;
+        if (sum >= 10 && sum <= 19) {
             return 20;
+        } else {
+            return sum;
         }
-        return sum;
     }
 }

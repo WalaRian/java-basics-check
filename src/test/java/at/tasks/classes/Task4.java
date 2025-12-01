@@ -20,7 +20,7 @@ public class Task4 {
         }
     }
 
-    public static boolean isPositive(int x){
-        return x >= 0;
+    public static boolean isPositive(int x) {
+        return  x > 0;
     }
 }

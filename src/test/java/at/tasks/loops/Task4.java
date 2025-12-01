@@ -24,16 +24,14 @@ public class Task4 {
 
 
     public static int pow(int x, int y) {
-
-        int result = 1;
-
-        for (int i = 0; i < y; i++) {
-
-            result *= x;
-
+        if (y < 0) {
+            throw new IllegalArgumentException("y must be non-negative");
         }
 
+        int result = 1;
+        for (int i = 0; i < y; i++) {
+            result *= x;
+        }
         return result;
-
     }
 }

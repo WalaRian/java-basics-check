@@ -26,17 +26,10 @@ public class Task1 {
 
 
     public static String listNums(int x) {
-
-        String result = "0";
-
-        for (int i = 1; i <= x; i++) {
-
-            result = result + " " +
-                    i;
-
+        String res="";
+        for (int i=0; i <= x; i++) {
+            res += i + " ";
         }
-
-        return result;
-
+        return res;
     }
 }

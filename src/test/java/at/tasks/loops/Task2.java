@@ -24,19 +24,12 @@ public class Task2 {
         }
     }
 
-    public static String reverseListNums(int x)
-    {
-
-        String result = String.valueOf(x);
-
-        for (int i = x-1; i >= 0; i--) {
-
-            result = result + " " +
-                    i;
-
+    public static String reverseListNums(int x) {
+        String res="";
+        for (int i=x; i>=0; i--) {
+            res += i + " ";
         }
-
-        return result;
-
+        return res;
     }
+
 }

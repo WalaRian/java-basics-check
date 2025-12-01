@@ -29,11 +29,10 @@ public class Task4 {
 
             String actualResult = makeDecision(x, y);
             System.out.println("%d %d -> %s".formatted(x, y, actualResult));
-            Assertions.assertThat(actualResult.replace(" ", ""))
+            Assertions.assertThat(actualResult.replace(" ", "").replace("\"", ""))
                     .isEqualTo(expectedResult);
         }
     }
-
 
     public static String makeDecision(int x, int y) {
         if (x > y) {

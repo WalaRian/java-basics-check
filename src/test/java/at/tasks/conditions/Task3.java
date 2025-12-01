@@ -22,9 +22,12 @@ public class Task3 {
         }
     }
 
-
     public static int max(int x, int y){
-        if (x > y) return x;
-        return y;
+        if(x>y){
+            return x;
+        }
+        else{
+            return y;
+        }
     }
 }

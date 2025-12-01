@@ -30,10 +30,11 @@ public class Task6 {
                     }
                 }
             } else {
-                x = (y + z) * random.nextInt(2, 10);
-//                x = 243;
-//                y = 162;
-//                z = -81;
+                while (((x + y == z) || (x + z == y) || (y + z == x))) {
+                    x = random.nextInt(-1000, 1000);
+                    y = random.nextInt(-1000, 1000);
+                    z = random.nextInt(-1000, 1000);
+                }
             }
 
             boolean actualResult = sum3(x, y, z);
@@ -44,7 +45,12 @@ public class Task6 {
     }
 
     public static boolean sum3(int x, int y, int z) {
-        return (x + y == z) || (y + z == x) || (x + z == y);
+        if (x + y == z)
+            return true;
+        if  (z + x == y )
+            return true;
+        if  (y + z == x)
+            return true;
+        return false;
     }
-
 }

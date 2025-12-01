@@ -23,18 +23,13 @@ public class Task5 {
 
 
     public static int numLen(long x) {
-
-        int result = 0;
-
-        while (x > 0) {
-
-            result++;
-
-            x = x / 10;
-
+        if (x == 0) {
+            return 1;
         }
-
-        return result;
-
+        int count = 0;
+        for (; x > 0; x /= 10) {
+            count++;
+        }
+        return count;
     }
 }

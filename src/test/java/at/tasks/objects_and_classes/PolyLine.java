@@ -1,41 +1,41 @@
 package at.tasks.objects_and_classes;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-class PolyLine {
-
-    List<Point> points;
+public class PolyLine {
+    Point[] pointArray;
 
     public PolyLine() {
-        this.points = new ArrayList<>();
+        this.pointArray = new Point[0];
     }
 
-    public PolyLine(List<Point> points) {
-        this();
-        this.points = points;
+    public PolyLine(Point[] pointArray) {
+        this.pointArray = Arrays.copyOf(pointArray, pointArray.length);
     }
 
-    public List<Line> getLines() {
-        List<Line> lines = new ArrayList<>();
-        for (int i = 0; i < points.size() - 1; i++) {
-            lines.add(new Line(points.get(i), points.get(i + 1)));
+    public Line[] getLines() {
+        Line[] lineArray = new Line[pointArray.length - 1];
+
+        for (int i = 0; i < lineArray.length; i++) {
+            lineArray[i] = new Line(pointArray[i], pointArray[i+1]);
         }
-        return lines;
+
+        return lineArray;
     }
 
     public double getLength() {
         double length = 0;
-        List<Line> lines = getLines();
-        for (int i = 0; i < lines.size(); i++){
-            length += lines.get(i).getLength();
+        Line[] linesArray = getLines();
+
+        for (int i = 0; i < linesArray.length; i++) {
+            length = length + linesArray[i].getLineLength();
         }
+
         return length;
     }
 
     @Override
     public String toString() {
-        return "Линия " + points;
+        return "";
     }
 }

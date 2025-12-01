@@ -22,6 +22,6 @@ public class Task3 {
     }
 
     public static int charToNum(char x) {
-        return (int) x - 48;
+        return x - '0';
     }
 }

@@ -57,7 +57,7 @@ public class Task9 {
         }
     }
 
-    public static boolean isEqual (int a, int b, int c){
-        return (a == b) && (b == c) && (c == a);
+    public static boolean isEqual (int a, int b, int c) {
+        return (a == b) && (a == c);
     }
 }

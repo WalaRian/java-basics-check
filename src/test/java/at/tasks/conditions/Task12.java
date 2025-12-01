@@ -15,12 +15,7 @@ public class Task12 {
     }
 
     public static void printDays(String x) {
-        if (x == null) {
-            System.out.println("это не день недели");
-            return;
-        }
-
-        switch (x.toLowerCase()) {
+        switch (x) {
             case "понедельник":
                 System.out.println("понедельник");
             case "вторник":

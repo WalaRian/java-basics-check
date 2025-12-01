@@ -48,20 +48,10 @@ public class Task1 {
         }
     }
 
-    public
-    static int findFirst(int[] arr, int x) {
-
-        for (int i = 0; i < arr.length; i++)
-        {
-
-            if (arr[i] == x) {
-
-                return i;
-
-            }
-
+    public static int findFirst(int[] arr, int x) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) return i;
         }
-
         return -1;
 
     }

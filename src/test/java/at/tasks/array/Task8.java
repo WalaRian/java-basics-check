@@ -35,13 +35,20 @@ public class Task8 {
     }
 
     public static int[] concat(int[] arr1, int[] arr2) {
-        int[] array = new int[arr1.length + arr2.length];
+        //создаём временный массим размером как два исходных
+        int[] arrTemp = new int[arr1.length + arr2.length];
+        //перемменая хранящая индекс текущего элемента временного массива
+        int index = 0;
+        //перебираем первый массив и записываем его значения во временный массим
         for (int i = 0; i < arr1.length; i++) {
-            array[i] = arr1[i];
+            arrTemp[index] = arr1[i];
+            index++;
         }
+        //перебираем второй массив и записываем его значения во временный массим
         for (int i = 0; i < arr2.length; i++) {
-            array[i + arr1.length] = arr2[i];
+            arrTemp[index] = arr2[i];
+            index++;
         }
-        return array;
+        return arrTemp;
     }
 }

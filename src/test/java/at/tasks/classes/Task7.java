@@ -37,7 +37,14 @@ public class Task7 {
     }
 
 
+//    public static boolean isInRange(int a, int b, int num) {
+//        int min = Math.min(a, b);
+//        int max = Math.max(a, b);
+//        boolean sas = num >= min && num <= max;
+//        return sas;
+//    }
+
     public static boolean isInRange(int a, int b, int num){
-        return (num >= a && num <= b) || ((num >= b && num <= a));
+        return num >= a && num <= b;
     }
 }

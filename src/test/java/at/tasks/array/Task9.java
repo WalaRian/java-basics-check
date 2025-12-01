@@ -3,10 +3,7 @@ package at.tasks.array;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Random;
+import java.util.*;
 
 public class Task9 {
     @RepeatedTest(10)
@@ -43,41 +40,24 @@ public class Task9 {
         }
     }
 
-    public
-    static int[] findAll(int[] arr, int x) {
-
+    public static int[] findAll(int[] arr, int x) {
+        //количество вхождений числа x в исходный массив
         int count = 0;
-
-        for (int i = 0; i < arr.length; i++)
-        {
-
-            if (arr[i] == x) {
-
-                count++;
-
-            }
-
+        //перебираем исходный массив, считаем количество вхождений числа x
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) count++;
         }
-
-        int result[] = new int[count];
-
-        count = 0;
-
-        for (int i = 0; i < arr.length; i++)
-        {
-
+        //создаём временный массив, размер - количество вхождений числа x в исходный массив
+        int[] arrTemp = new int[count];
+        //перебираем исходный массив, записываем во временный массив индексы вхождений числа x в исходный массив
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
-
-                result[count] = i;
-
-                count++;
-
+                arrTemp[index] = i;
+                index++;
             }
-
         }
-
-        return result;
-
+        return arrTemp;
     }
 
 }

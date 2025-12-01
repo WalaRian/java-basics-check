@@ -1,44 +1,24 @@
 package at.tasks.objects_and_classes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class City {
     String name;
-    List<Trail> trails = new ArrayList<>();
+    Route[] routes;
 
     public City(String name) {
         this.name = name;
+        this.routes = null;
     }
 
-    public City(String name, List<Trail> trail) {
+    public City(String name, Route[] routes) {
         this.name = name;
-        this.trails = trail;
+        this.routes = routes;
     }
 
-    @Override
-    public String toString() {
-        return "Город: " + name + "; " + "Пути в: " + trails;
+    public void addRoute(Route route) {
+
     }
 
-    public void addTrail(Trail trail){
-        this.trails.add(trail);
-    }
-
-    public void addTrail(City city, int cost){
-        Trail trail = new Trail(city,cost);
-        this.trails.add(trail);
-    }
-
-    public City travelBy(int n){
-        City city = this.trails.get(0).toCity;
-        for (int i = 0; i < n-1; i++) {
-            city = city.trails.get(0).toCity;
-        }
-        return city;
+    public void addRoute(City city, int price) {
+        
     }
 }
-
-
-
-

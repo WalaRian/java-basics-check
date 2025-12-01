@@ -40,16 +40,16 @@ public class Task8 {
 
 
     //Практика Java. Условия Задание #8
-    public static boolean is35(int x){
-        if ((x % 3 == 0) && (x % 5 == 0)){
+    public static boolean is35(int x) {
+        boolean divisibleBy3 = (x % 3 == 0);
+        boolean divisibleBy5 = (x % 5 == 0);
+
+        if (divisibleBy3 && divisibleBy5) {
+            return false;
+        } else if (divisibleBy3 || divisibleBy5) {
+            return true;
+        } else {
             return false;
         }
-        if (x % 3 == 0) {
-            return true;
-        }
-        if (x % 5 == 0) {
-            return true;
-        }
-        return false;
     }
 }

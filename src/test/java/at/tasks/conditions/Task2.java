@@ -23,10 +23,11 @@ public class Task2 {
         }
     }
 
-    public static int safeDiv(int x, int y){
+    public static int safeDiv(int x, int y) {
         if (y == 0) {
             return 0;
+        } else {
+            return x / y;
         }
-        return x / y;
     }
 }

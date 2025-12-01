@@ -24,14 +24,14 @@ public class Task5 {
         }
     }
 
-
-    public static int max3(int x, int y, int z){
-        if ((x >= y) && (x >= z)) {
-            return x;
+    public static int max3(int x, int y, int z) {
+        int max = x;
+        if (y > max) {
+            max = y;
         }
-        if ((y >= x) && (y >= z)) {
-            return y;
+        if (z > max) {
+            max = z;
         }
-        return z;
-    };
+        return max;
+    }
 }

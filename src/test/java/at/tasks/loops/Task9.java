@@ -13,18 +13,14 @@ public class Task9 {
         rightTriangle(x);
     }
 
-
     public static void rightTriangle(int x) {
         for (int i = 1; i <= x; i++) {
-            // Выводим пробелы: (x - i)
             for (int j = 0; j < x - i; j++) {
-                System.out.print(" ");
+                System.out.print(' ');
             }
-            // Выводим звездочки: i
-            for (int k = 0; k < i; k++) {
-                System.out.print("*");
+            for (int j = 0; j < i; j++) {
+                System.out.print('*');
             }
-            // Переход на новую строку
             System.out.println();
         }
     }
